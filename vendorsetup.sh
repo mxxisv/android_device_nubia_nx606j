@@ -1,0 +1,2 @@
+add_lunch_combo omni_nx606j-eng
+add_lunch_combo omni_nx606j-userdebug
