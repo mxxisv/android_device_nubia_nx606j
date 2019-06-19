@@ -102,6 +102,7 @@ BOARD_HAS_NO_REAL_SDCARD := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d.%H')
 TW_EXCLUDE_TWRPAPP := true
 TW_EXTRA_LANGUAGES := true
