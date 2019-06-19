@@ -5,16 +5,23 @@ Device configuration for ZTE Nubia Z18 NX606J
 Tree for building TWRP for Nubia Z18
 
 ## To compile
-
-. build/envsetup.sh && lunch omni_nx606j-eng
-
+```
+. build/envsetup.sh
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
+lunch mk_nx606j-eng
 mka recoveryimage
+```
 
-## To flash
-
+## To test it
+```
+adb reboot bootloader
 fastboot oem nubia_unlock NUBIA_NX606J
+fastboot flash recovery out/target/product/nx606j/recovery.img
+```
 
-fastboot flash recovery recovery.img
+## Credits
+I want to say a big thanks to [XiNGRZ](https://github.com/xingrz) [youyim](https://github.com/youyim) [mauronofrio matarrese](https://github.com/mauronofrio)
 
 ---
 
@@ -24,19 +31,19 @@ ZTE Nubia Z18 was announced and released in June 2018.
 
 ## Device specifications
 
-| Device       | ZTE Nubia Z18                                          |
-| -----------: | :----------------------------------------------------- |
-| SoC          | Qualcomm SDM845 Snapdragon 845                         |
-| CPU          | Quad-core 2.45GHz Kryo & quad-core 1.9GHz Kryo         |
-| GPU          | 710MHz Adreno 540                                      |
-| Memory       | 6GB / 8GM RAM (LPDDR4X)                                |
-| Shipped Android version | 8.1.0                                       |
-| Storage      | 64GB / 128GB (UFS 2.1 2-LANE Flash)                    |
-| Battery      | Non-removable Li-Po 3450 mAh                           |
-| Dimensions   | 148.58 x 72.54 x 8.55 mm                               |
-| Display      | 1080 x 2160 px, 5.99 inches (403 PPI)                  |
-| Rear camera  | 16 MPx, f/1.8, OIS, Dual PD autofocus + 24 MPx, f/1.6  |
-| Front camera | 8 MPx, f/2.0                                           |
+| Device       | ZTE Nubia Z18                                                      |
+| -----------: | :----------------------------------------------------------------- |
+| SoC          | Qualcomm SDM845 Snapdragon 845                                     |
+| CPU          | Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.7 GHz Kryo 385 Silver)    |
+| GPU          | Adreno 630                                                         |
+| Memory       | 6GB / 8GM RAM (LPDDR4X)                                            |
+| Shipped Android version | 8.1.0                                                   |
+| Storage      | 64GB / 128GB (UFS 2.1 2-LANE Flash)                                |
+| Battery      | Non-removable Li-Po 3450 mAh                                       |
+| Dimensions   | 148.58 x 72.54 x 8.55 mm                                           |
+| Display      | 1080 x 2160 px, 5.99 inches (403 PPI)                              |
+| Rear camera  | 16 MPx, f/1.8, OIS, Dual PD autofocus + 24 MPx, f/1.6              |
+| Front camera | 8 MPx, f/2.0                                                       |
 
 ## Device picture
 
